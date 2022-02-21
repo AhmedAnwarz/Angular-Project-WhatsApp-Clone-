@@ -17,17 +17,17 @@ export class ChatComponent implements OnInit {
 
   submitMessage(event: any) {
     const dateNow = new Date();
-    const dateNowMinusEightHours = `${dateNow.getHours() > 12? dateNow.getHours() - 12 : dateNow.getHours()}:${dateNow.getMinutes()} ${dateNow.getHours() > 12? 'pm' : 'am'}`;
+    const dateNowMinutesHours = `${dateNow.getHours() > 12? dateNow.getHours() - 12 : dateNow.getHours()}:${dateNow.getMinutes()} ${dateNow.getHours() > 12? 'pm' : 'am'}`;
 
     let value = event.target.value.trim()
     this.message = ''
     if (value.length >= 1) {
       this.chat.messages.unshift({
-        id: 1, body: value, time: dateNowMinusEightHours, me: true
+        id: 1, body: value, time: dateNowMinutesHours, me: true
       })
     }
     this.chat.message = value
-    this.chat.time =dateNowMinusEightHours
+    this.chat.time =dateNowMinutesHours
   }
 
   emojiClicked(event:any){
