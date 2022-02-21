@@ -1,116 +1,137 @@
 .chats-Con {
-    height: 100vh;
-    overflow: visible;
-    overflow-y: scroll;
-    width: 100%;
-    z-index: -1;
-  }
-  
-  .chat {
-    width: 360px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    position: relative;
-    border-bottom: 0.2px solid rgba(0, 0, 0, 0.096);
-  }
-  .chat img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 0px 8px;
-  }
-  .name {
-    font-size: 22px;
-    position: absolute;
-    left: 19%;
-    top: -5px;
-  }
-  .mess-Con {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    position: absolute;
-    left: 19%;
-    top: 30px;
-  }
-  .message {
-    margin-left: 8px;
-  }
-  .sent {
-    color: rgba(128, 128, 128, 0.651);
-  }
-  .seen {
-    color: #79b6d5;
-  }
-  .time {
-    position: absolute;
-    right: 10px;
-    top: 0px;
-    font-size: 13px;
-  }
-  .chat:hover {
-    background-color: rgba(0, 0, 0, 0.096);
-    border: 0px;
-    cursor: pointer;
-  }
-  .chat:hover .arrow {
-    opacity: 1;
-  }
-  .arrow {
-    color: gray;
-    position: absolute;
-    right: 15px;
-    bottom: 10px;
-    opacity: 0;
-  }
-  .arrow2 {
-    color: gray;
-    position: absolute;
-    right: 15px;
-    bottom: 10px;
-  }
-  .menu {
-    position: absolute;
-    width: 170px;
-    height: 200px;
-    background-color: white;
-    right: -130px;
-    top: 70px;
-    z-index: 100;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.144);
-  }
-  .menu p {
-    padding: 10px 20px;
-    margin: 0;
-  }
-  .menu p:hover {
-    background-color: rgba(0, 0, 0, 0.096);
-  }
-  .menu-Con {
-    position: absolute;
-    right: -100px;
-    width: 300px;
-    height: 300px;
-  }
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 5px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: rgba(68, 68, 68, 0.322);
-    border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgba(80, 80, 80, 0.342);
-  }
-  
+  height: 100vh;
+  overflow: visible;
+  overflow-y: scroll;
+  width: 100%;
+  z-index: -1;
+}
+
+.chat {
+  width: 360px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  border-bottom: 0.2px solid rgba(0, 0, 0, 0.096);
+}
+
+.chat img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0px 8px;
+}
+
+.name {
+  font-size: 22px;
+  position: absolute;
+  left: 19%;
+  top: -5px;
+}
+
+.mess-Con {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: absolute;
+  left: 19%;
+  top: 30px;
+}
+
+.message {
+  margin-left: 8px;
+  display: block;/* or inline-block */
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 1em;
+  line-height: 1em;
+}
+
+.sent {
+  color: rgba(128, 128, 128, 0.651);
+}
+
+.seen {
+  color: #79b6d5;
+}
+
+.time {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  font-size: 13px;
+}
+
+.chat:hover {
+  background-color: rgba(0, 0, 0, 0.096);
+  border: 0px;
+  cursor: pointer;
+}
+
+.chat:hover .arrow {
+  opacity: 1;
+}
+
+.arrow {
+  color: gray;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  opacity: 0;
+}
+
+.arrow2 {
+  color: gray;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+}
+
+.menu {
+  position: absolute;
+  width: 170px;
+  height: 200px;
+  background-color: white;
+  right: -130px;
+  top: 70px;
+  z-index: 100;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.144);
+}
+
+.menu p {
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.menu p:hover {
+  background-color: rgba(0, 0, 0, 0.096);
+}
+
+.menu-Con {
+  position: absolute;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(68, 68, 68, 0.322);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(80, 80, 80, 0.342);
+}

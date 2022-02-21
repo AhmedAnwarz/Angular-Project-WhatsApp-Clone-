@@ -17,7 +17,7 @@ export class ChatComponent implements OnInit {
 
   submitMessage(event: any) {
     const dateNow = new Date();
-    const dateNowMinusEightHours = `${dateNow.getHours()}:${dateNow.getMinutes()}`;
+    const dateNowMinusEightHours = `${dateNow.getHours() > 12? dateNow.getHours() - 12 : dateNow.getHours()}:${dateNow.getMinutes()} ${dateNow.getHours() > 12? 'pm' : 'am'}`;
 
     let value = event.target.value.trim()
     this.message = ''
@@ -27,6 +27,7 @@ export class ChatComponent implements OnInit {
       })
     }
     this.chat.message = value
+    this.chat.time =dateNowMinusEightHours
   }
 
   emojiClicked(event:any){

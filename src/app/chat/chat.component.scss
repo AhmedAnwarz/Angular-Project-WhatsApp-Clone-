@@ -16,8 +16,7 @@
     .avatarSection {
         display: flex;
         .picture {
-            min-width: 40px;
-            max-width: 40px;
+            
             margin: 0px 10px;
             img {
                 max-width: 100%;
@@ -37,6 +36,9 @@
         img {
             width: 20px;
             margin-right: 15px;
+            border-radius: 50%;
+    margin: 0px 8px;
+
             cursor: pointer;
         }
     }
@@ -45,7 +47,6 @@ img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    margin: 0px 8px;
   }
 .chatBody {
     flex-grow: 1;
