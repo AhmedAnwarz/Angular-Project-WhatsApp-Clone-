@@ -20,6 +20,8 @@
     border-radius: 3px;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
+
 }
 #sidebar{
     display: flex;
@@ -65,7 +67,7 @@
     top: 0%;
     bottom: 0%;
     margin: auto;
-    width: 100%;
+    width: 80%;
     height: 80%;
     background-color: #fff;
     right: 0px;
