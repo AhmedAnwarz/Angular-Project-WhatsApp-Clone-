@@ -1,0 +1,116 @@
+.chatContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #e2dad7;
+    flex-direction: column;
+}
+.chatHeader {
+    min-height: 68px;
+    background-color: #eeeeee;
+    box-shadow: 2px 0px 4px #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .avatarSection {
+        display: flex;
+        .picture {
+            min-width: 40px;
+            max-width: 40px;
+            margin: 0px 10px;
+            img {
+                max-width: 100%;
+            }
+        }
+        .nameSection {
+            flex-grow: 1;
+            padding-top: 4px;
+            color: #545454;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .actionButtons {
+        min-width: 50px;
+        display: flex;
+        img {
+            width: 20px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+    }
+}
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0px 8px;
+  }
+.chatBody {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    padding: 20px 50px;
+    overflow: scroll;
+    .message {
+        margin-top: 10px;
+        display: flex;
+        align-items: flex-start;
+        color: #111b21;
+        flex-direction: column;
+
+        .messageContent {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+
+            .time {
+                text-align: right;
+                color: #959698;
+                font-size: 13px;
+                margin-top: 5px;
+            }
+        }
+        &.me {
+            align-items: flex-end;
+            .messageContent {
+                background-color: #d9fdd3;
+            }
+        }
+    }
+}
+.chatFooter {
+    min-height: 68px;
+    background-color: #f0eeed;
+    display: flex;
+}
+.smileyIcon,
+.micIcon {
+    flex-basis: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.smileyIcon img,
+.micIcon img {
+    max-width: 40%;
+    cursor: pointer;
+}
+.textArea {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+.textArea textarea {
+    width: 100%;
+    height: 45px;
+    border: 0px;
+    border-radius: 4px;
+    resize: none;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}

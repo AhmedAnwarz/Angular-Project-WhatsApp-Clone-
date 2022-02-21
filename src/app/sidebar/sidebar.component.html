@@ -1,0 +1,23 @@
+<app-search-bar></app-search-bar>
+<div class="chats-Con">
+    <div class="chat" *ngFor="let chat of !searchText?conversations:filteredConversations, index as i"
+      (click)="conversationClicked.emit(chat)">
+      <img src="{{chat.img}}" alt="blank photo">
+      <p class="name">{{chat.ChName}}</p>
+      <div class="mess-Con">
+   <!--  <fa-icon [hidden]="chat.seen" class="sent" [icon]="faCheck"></fa-icon>
+        <fa-icon [hidden]="!chat.seen" class="seen" [icon]="faCheckDouble"></fa-icon>-->   
+        <p class="message">{{chat.message}}</p>
+      </div>
+      <p class="time">{{chat.time}}</p>
+    <!--  <fa-icon (click)="seeMenu(i)" [hidden]="!chat.Menu" class="arrow" [icon]="faChevronDown"></fa-icon>
+      <fa-icon (click)="hideMenu(i)" [hidden]="chat.Menu" class="arrow2" [icon]="faAngleUp"></fa-icon>-->   
+      <div [hidden]='chat.Menu' class="menu">
+        <p>Archive Chat</p>
+        <p>Mute Notifications</p>
+        <p>Delete Chat</p>
+        <p>Pin Chat</p>
+        <p>Mark as unread</p>
+      </div>
+    </div>
+  </div>

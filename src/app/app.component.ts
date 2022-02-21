@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Project-WhatsApp-Clone';
+
+  
+  chat: any;
+  onConversationSelected(chat: any){
+    this.chat = chat;
+  }
 }
